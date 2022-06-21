@@ -48,5 +48,13 @@ print("<br>");
 print("message :  {$result["message"]} "); 
 echo "<br>Sukses terkirim ke ubuntu server !";
 echo "<br><a href=Barang.php> OK </a>";
+include("notifikasi.php");
+// $keyclient = "f9GUSwLmRtGi4_eCiGoMho:APA91bEA6FvRBvPv4dRDhvQnrUhiKZtdV6JocsKQOO9IW8I4iXfkiH9Qnz9ElqwMZbJCYywNolP18AMTX76U2foMAvJlp4-DJXFy6OHASwr1eH1pRpBF_7jssYdVuWl4Q6Sw6SH02WOH";
+$keyclient = "cePTqvyJT2KJRFSF7aXXf8:APA91bEG7hKIYlXJMeLjstIXRu66LlL-BhX_-jd8LqTgiFzvN1tgFCG7mimhkXbTNBQtNI63cl1doSyyDOsH6EX8bx7TNNoxDcMEuhcxDS-Nv1iN78yWtDmRbXQv6ky6UQL22ys6FL1i";
+$title     = "Barang $item_name ,tertambah";
+$body       = "$item_code";
+$icon       = "";
+$url        = "";
+sendPush($keyclient, $title, $body, $icon, $url);
 }
 ?>
